@@ -657,7 +657,6 @@ section {
 .separator {
     background: url(../img/backgrounds/background.jpg) center center no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     padding: 60px 0;
     position: relative;
 }
@@ -716,6 +715,12 @@ section {
     }
 }
 
+@media (min-width: 992px) {
+    .separator {
+        background-attachment: fixed;
+    }
+}
+
 /*--------------------------------------------------------------
 # Materials
 --------------------------------------------------------------*/
@@ -759,6 +764,7 @@ section {
     font-size: 18px;
     font-weight: 600;
     margin: 0;
+    text-align: center;
 }
 
 .materials .nav-link:hover {
@@ -959,25 +965,26 @@ section {
 }
 
 .team .member .social a {
-    transition: color 0.3s;
-    margin: 0 3px;
-    border-radius: 50px;
-    width: 36px;
-    height: 36px;
-    background: rgba(214, 152, 52, 0.8);
     transition: ease-in-out 0.3s;
+    margin: 0 7px;
+    border-radius: 50px;
+    width: 46px;
+    height: 46px;
+    background: rgba(214, 152, 52, 0.8);
     color: #fff;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.4);
 }
 
 .team .member .social a:hover {
     background: var(--color);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.7);
 }
 
 .team .member .social i {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 0;
 }
 
@@ -994,7 +1001,7 @@ section {
 
 .team .member .member-info span {
     display: block;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
     color: #aaaaaa;
 }
@@ -1082,13 +1089,13 @@ section {
 # Footer
 --------------------------------------------------------------*/
 
-#footer {
+.footer {
     color: #fff;
     font-size: 14px;
     text-align: center;
     padding: 30px 0;
     background-size: cover;
-    background: url(../img/backgrounds/background2.png) no-repeat fixed center center;
+    background: url(../img/backgrounds/background2.png) center center no-repeat;
     position: relative;
 }
 
@@ -1102,7 +1109,7 @@ section {
     bottom: 0;
 }
 
-#footer h3 {
+.footer h3 {
     font-size: 36px;
     font-weight: 700;
     color: #fff;
@@ -1112,22 +1119,28 @@ section {
     margin: 0 0 15px 0;
 }
 
-#footer p {
+.footer p {
     font-size: 15px;
     padding: 0;
     margin: 0 0 30px 0;
     position: relative;
 }
 
-#footer img {
+.footer img {
     height: 40px;
     position: relative;
 }
 
 @media (max-width: 768px) {
 
-    #footer img {
+    .footer img {
         height: 30px;
         position: relative;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer {
+        background-attachment: fixed;
     }
 }
