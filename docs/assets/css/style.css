@@ -386,6 +386,10 @@ h6 {
     padding-top: 60px;
 }
 
+#hero p.color {
+    color: var(--color);
+}
+
 #hero h2 {
     color: #fff;
     margin-bottom: 30px;
