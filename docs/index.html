@@ -39,6 +39,7 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/leaflet/css/leaflet.css" rel="stylesheet">
 
     <!-- Main CSS Files -->
     <link href="assets/css/fonts.css" rel="stylesheet">
@@ -848,38 +849,43 @@
             </div>
 
             <div class="row" data-aos="zoom-out">
-                <p>Horario de 15:30 a 19:30, en el Aula 10.1.</p>
-                <div class="col-12 col-lg-6 order-2 order-lg-1 text-center text-lg-start" style="padding-top: 40px;">
-                    <h3>SEPTIEMBRE</h3>
-                    <div class="row" data-aos="zoom-out">
-                        <div class="col-lg-2 cal_day">
-                            <h4>19</h4>
-                            <span class="tooltiptext">Módulos I y II</span>
+                <div class="col-12 col-lg-4 text-center text-lg-start">
+                    <p>Horario de 15:30 a 19:30, en el Aula 10.1.</p>
+                    <div class="mt-4">
+                        <h3>SEPTIEMBRE</h3>
+                        <div class="row" data-aos="zoom-out">
+                            <div class="col-lg-2 cal_day">
+                                <h4>19</h4>
+                                <span class="tooltiptext">Módulos I y II</span>
+                            </div>
+                            <div class="col-lg-2 cal_day">
+                                <h4>21</h4>
+                                <span class="tooltiptext">Módulos III y IV</span>
+                            </div>
+                            <div class="col-lg-2 cal_day">
+                                <h4>26</h4>
+                                <span class="tooltiptext">Módulos V, VI y VII</span>
+                            </div>
+                            <div class="col-lg-2 cal_day">
+                                <h4>28</h4>
+                                <span class="tooltiptext">Módulos VIII y IX</span>
+                            </div>
                         </div>
-                        <div class="col-lg-2 cal_day">
-                            <h4>21</h4>
-                            <span class="tooltiptext">Módulos III y IV</span>
-                        </div>
-                        <div class="col-lg-2 cal_day">
-                            <h4>26</h4>
-                            <span class="tooltiptext">Módulos V, VI y VII</span>
-                        </div>
-                        <div class="col-lg-2 cal_day">
-                            <h4>28</h4>
-                            <span class="tooltiptext">Módulos VIII y IX</span>
+                    </div>
+                    <div class="mt-4">
+                        <h3>Quedan</h3>
+                        <div class="row" data-aos="zoom-out">
+                            <div id="timer">
+                                <h4 id="days" class="d-lg-inline"></h4>
+                                <h4 id="hours" class="d-lg-inline"></h4>
+                                <h4 id="minutes" class="d-lg-inline"></h4>
+                                <h4 id="seconds" class="d-lg-inline"></h4>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 order-1 order-lg-2 text-center text-lg-start" style="padding-top: 40px;">
-                    <h3>Quedan</h3>
-                    <div class="row" data-aos="zoom-out">
-                        <div id="timer">
-                            <h4 id="days" class="d-lg-inline"></h4>
-                            <h4 id="hours" class="d-lg-inline"></h4>
-                            <h4 id="minutes" class="d-lg-inline"></h4>
-                            <h4 id="seconds" class="d-lg-inline"></h4>
-                        </div>
-                    </div>
+                <div class="col-12 col-lg-8 d-flex pt-4 pt-lg-0" style="min-height: 200px">
+                    <div id="map" class="w-100"></div>
                 </div>
             </div>
 
@@ -1125,10 +1131,12 @@
 <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/leaflet/js/leaflet.js"></script>
 
 <!-- Main JS Files -->
 <script src="assets/js/main.js"></script>
-<script src="assets/js/countdown.js"></script>
+<script defer src="assets/js/countdown.js"></script>
+<script defer src="assets/js/osm.js"></script>
 
 </body>
 
